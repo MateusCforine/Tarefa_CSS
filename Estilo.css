@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* Menu fixo no topo */
+.menu {
+    background-color: #222;
+    color: gray;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a {
+    color: Gray;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Rodapé fixo embaixo */
+.rodape {
+    background-color: #222;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Imagens */
+.foto {
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+    border: 2px solid black;
+    margin: 10px 0;
+}
+
+/* Seletor de elemento */
+p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Seletor de classe */
+.destaque {
+    background-color: yellow;
+    border: 2px solid orange;
+    padding: 10px;
+}
+
+/* Seletor de ID */
+#home {
+    padding: 20px;
+    background-color: #f0f0f0;
+}

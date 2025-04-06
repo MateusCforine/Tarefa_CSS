@@ -6,9 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    height: 100vh;
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
 }
 
 /* Menu fixo no topo */
@@ -65,4 +64,21 @@ p {
 #home {
     padding: 20px;
     background-color: #f0f0f0;
+}
+
+/* Espaçamento entre seções */
+section {
+    margin: 30px;
+}
+
+/* Efeito nas imagens ao passar o mouse */
+.foto:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Centralizar iframe */
+iframe {
+    display: block;
+    margin: 20px auto;
 }

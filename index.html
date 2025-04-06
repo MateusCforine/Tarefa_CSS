@@ -3,44 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Página Pessoal</title>
-    <link rel="stylesheet" href="Estilo.css">
+    <link rel="stylesheet" href="estilo.css">
+    <style>
+        .aba {
+            display: none;
+        }
+        .ativa {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
     <header class="menu">
         <nav>
-            <a href="#home">Home</a> | 
-            <a href="#projetos">Projetos</a> | 
-            <a href="#hobbies">Hobbies</a> | 
-            <a href="#contato">Contato</a>
+            <a href="#" onclick="mostrarAba('home')">Home</a> | 
+            <a href="#" onclick="mostrarAba('projetos')">Projetos</a> | 
+            <a href="#" onclick="mostrarAba('hobbies')">Hobbies</a> | 
+            <a href="#" onclick="mostrarAba('contato')">Contato</a>
         </nav>
     </header>
 
     <main>
-        <section id="home">
+        <section id="home" class="aba ativa">
             <h1>HOME</h1>
             <p class="destaque">Meu nome é Mateus Forine Carvalho.</p>
             <p>Nessa página pessoal, vou apresentar alguns projetos e hobbies.</p>
             <img src="imagem_mateus.jpg" alt="Foto Mateus" class="foto">
         </section>
 
-        <section id="projetos">
+        <section id="projetos" class="aba">
             <h1>Projetos Pessoais</h1>
             <p>Projeto 1: <strong>Guarda Chuva Sensorial</strong> – Uma tecnologia que protege roupas no varal, ativada automaticamente por um sensor de chuva.</p>
             <p>Projeto 2: <strong>EcoStock</strong> – Gerenciamento de estoque, ajudando no controle de produtos e suas validades.</p>
             <img src="imagem_projeto.jpg" alt="Imagem do Projeto" class="foto">
         </section>
 
-        <section id="hobbies">
+        <section id="hobbies" class="aba">
             <h1>Hobbies</h1>
             <p>Hobbie 1: Futebol – Gosto de jogar futebol nas horas vagas, tanto por diversão quanto por saúde.</p>
             <p>Hobbie 2: Academia – Costumo ir todos os dias, tanto por saúde quanto porque gosto.</p>
 
-            <h3>Meu vídeo favorito:</h3>
-            <iframe width="350" height="200" src="https://www.youtube.com/watch?v=YEmdHbQBCSQ" title="Vídeo exemplo" frameborder="0" allowfullscreen></iframe>
+            <h3>Vídeo sobre a Matéria:</h3>
+            <iframe width="350" height="200" src="https://www.youtube.com/embed/YEmdHbQBCSQ" title="Vídeo exemplo" frameborder="0" allowfullscreen></iframe>
         </section>
 
-        <section id="contato">
+        <section id="contato" class="aba">
             <h1>Contato</h1>
             <p>E-mail: mateuscf938@gmail.com</p>
             <p>Instagram: <a href="https://www.instagram.com/talibaa__?igsh=a24xYWhzcjB0azQ2" target="_blank">Instagram</a></p>
@@ -50,6 +58,14 @@
     <footer class="rodape">
         <p>© 2024 Mateus Forine Carvalho</p>
     </footer>
+
+    <script>
+        function mostrarAba(id) {
+            const secoes = document.querySelectorAll('.aba');
+            secoes.forEach(secao => secao.classList.remove('ativa'));
+            document.getElementById(id).classList.add('ativa');
+        }
+    </script>
 
 </body>
 </html>
